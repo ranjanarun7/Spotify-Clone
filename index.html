@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify - Your favourite music is here</title>
+        <link rel="stylesheet" href="style.css">
+        </head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li><button id="navHome" class="navLink isActive" type="button">Home</button></li>
+            <li><button id="navAbout" class="navLink" type="button">About</button></li>
+        </ul>
+    </nav>
+
+    <section id="aboutPage" class="aboutPage" hidden>
+        <article class="aboutPageInner">
+            <header class="aboutHero">
+                <p class="aboutEyebrow">Developer Notes</p>
+                <h1>About This Spotify Clone</h1>
+                <p>
+                    This project is intentionally built with a vanilla frontend stack: HTML, CSS, and JavaScript.
+                    The goal was to create a lightweight music player with clean interaction design, responsive
+                    behavior, and maintainable code without relying on heavy UI frameworks.
+                </p>
+                <button id="aboutClose" class="aboutCloseBtn" type="button" aria-label="Back to home">Back to Home</button>
+            </header>
+
+            <section class="aboutBlock aboutProfileBlock">
+                <img class="profileImage" src="about-me1.png" alt="Developer profile image">
+                <div class="profileText">
+                    <h2>Developer Profile</h2>
+                    <p>
+                        I enjoy building practical frontend interfaces where visual polish and interaction quality
+                        matter equally. My focus areas are UI architecture, responsive systems, and state-driven
+                        behavior for media-rich web experiences.
+                    </p>
+                    <div class="profileLinks">
+                        <a href="https://github.com/ranjanarun7" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/arunkumardypu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="aboutBlock">
+                <h2>Why This Build Exists</h2>
+                <p>
+                    Building a streaming-style UI looks simple at first, but real complexity appears when playback
+                    state, control synchronization, keyboard shortcuts, and responsive behavior must all work together.
+                    This build is designed as a practical frontend engineering exercise, not only a visual clone.
+                </p>
+            </section>
+
+            <section class="aboutBlock">
+                <h2>Implemented Features</h2>
+                <ul class="aboutList">
+                    <li>Master play/pause, previous/next controls, and per-song play buttons</li>
+                    <li>Progress seekbar with current and total duration labels</li>
+                    <li>Shuffle and repeat modes with proper state indication</li>
+                    <li>Volume slider, mute toggle, and keyboard shortcuts</li>
+                    <li>Search filter for playlist and active-song highlight</li>
+                    <li>Responsive UI for desktop, tablet, and mobile screens</li>
+                </ul>
+            </section>
+
+            <section class="aboutBlock">
+                <h2>Technical Approach</h2>
+                <p>
+                    State management is intentionally minimal. Core states such as current track index,
+                    playback status, shuffle, and repeat mode are stored in JavaScript. UI updates are centralized
+                    through helper functions so that control states and track states remain consistent.
+                </p>
+                <p>
+                    On the styling side, the layout uses a flex and grid combination with a strong visual hierarchy.
+                    Gradients, contrast cards, and spacing rhythm are used to improve readability and control
+                    discoverability, not only visual decoration.
+                </p>
+            </section>
+
+            <section class="aboutBlock">
+                <h2>What I Would Improve Next</h2>
+                <ul class="aboutList">
+                    <li>Local storage persistence for last song and playback position</li>
+                    <li>Favorites playlist and history queue</li>
+                    <li>Mini-player mode for compact screens</li>
+                    <li>Accessibility pass for high contrast and full keyboard navigation</li>
+                    <li>Audio visualization panel for now-playing track</li>
+                </ul>
+            </section>
+
+            <footer class="aboutFooter">
+                <p>
+                    Built with focus on clean interaction, maintainable code, and practical frontend behavior.
+                </p>
+                <section class="contactSection">
+                    <h2>Contact</h2>
+                    <p>If you want to collaborate on frontend projects, feel free to reach out.</p>
+                    <a href="mailto:ranjanarunyadav07@gmail.com">ranjanarunyadav07@gmail.com</a>
+                </section>
+                <button id="aboutCloseBottom" class="aboutCloseBtn" type="button" aria-label="Back to home from footer">Go Back to Player</button>
+            </footer>
+        </article>
+    </section>
+
+    <div class="container" id="homeSection">
+        <div class="songList">
+            <div class="listTop">
+                <div>
+                    <h1>Best of NCS - No Copyright Sounds</h1>
+                    <p class="listSubtitle">Play your favorite tracks with quick controls and keyboard shortcuts.</p>
+                </div>
+                <input type="search" id="searchSongs" placeholder="Search songs..." aria-label="Search songs">
+            </div>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="0" class="songItemPlay" type="button" aria-label="Play song 1">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="1" class="songItemPlay" type="button" aria-label="Play song 2">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="2" class="songItemPlay" type="button" aria-label="Play song 3">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="3" class="songItemPlay" type="button" aria-label="Play song 4">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="4" class="songItemPlay" type="button" aria-label="Play song 5">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="5" class="songItemPlay" type="button" aria-label="Play song 6">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="6" class="songItemPlay" type="button" aria-label="Play song 7">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="7" class="songItemPlay" type="button" aria-label="Play song 8">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="8" class="songItemPlay" type="button" aria-label="Play song 9">▶</button></span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Let me Love You</span>
+                    <span class="songlistplay"><span class="timestamp"><span class="timeLabel">05:34</span><button id="9" class="songItemPlay" type="button" aria-label="Play song 10">▶</button></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner">
+            <div class="bannerOverlay">
+                <img id="bannerCover" src="covers/1.jpg" alt="Now playing cover">
+                <p class="nowLabel">Now Playing</p>
+                <h2 id="bannerSongName">Warriyo - Mortals [NCS Release]</h2>
+                <p id="bannerHint">Shortcuts: Space (Play/Pause), N (Next), P (Previous)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom" id="playerControls">
+        <div class="progressRow">
+            <span id="currentTime">00:00</span>
+            <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+            <span id="totalTime">00:00</span>
+        </div>
+        <div class="icons">
+            <button class="miniControl" id="shuffle" type="button" aria-label="Shuffle">🔀</button>
+            <button class="controlBtn" id="previous" type="button" aria-label="Previous song">⏮</button>
+            <button class="controlBtn controlBtnMain" id="masterPlay" type="button" aria-label="Play/Pause">▶</button>
+            <button class="controlBtn" id="next" type="button" aria-label="Next song">⏭</button>
+            <button class="miniControl" id="repeat" type="button" aria-label="Repeat mode">🔁</button>
+        </div>
+        <div class="utilityRow">
+            <button class="miniControl" id="muteBtn" type="button" aria-label="Mute">🔊</button>
+            <input type="range" id="volumeBar" min="0" max="100" value="80" aria-label="Volume">
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
