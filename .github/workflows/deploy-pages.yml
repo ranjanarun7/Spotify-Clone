@@ -33,6 +33,9 @@ jobs:
           cp index.html dist/
           cp style.css dist/
           cp script.js dist/
+          cp *.png dist/
+          cp *.jpg dist/
+          cp *.gif dist/
           cp -r covers dist/
           cp -r songs dist/
 
